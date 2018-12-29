@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.data" Member="datas">
+    <Type Name="data">
+      <Column Name="DataID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Total" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="[Open]" Member="Open" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="OpenH" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Occupied" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="OccupiedH" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="RecordedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
