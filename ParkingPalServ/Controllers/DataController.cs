@@ -23,7 +23,7 @@ namespace ParkingPalServ.Controllers
             Response.Write("<h2>Open Handicapped: " + d.OpenH + "</h2>");
             Response.Write("<h2>Occupied: " + d.Occupied + "</h2>");
             Response.Write("<h2>Occupied Handicapped: " + d.OccupiedH + "</h2>");
-            Response.Write("</br><h3>Date/Time Updated: " + d.RecordedDate + "</h3>");
+            Response.Write("</br><h3>Date/Time Updated: " + d.RecordedDate + " ET</h3>");
         }
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult UpdateData()
@@ -42,7 +42,7 @@ namespace ParkingPalServ.Controllers
             du.OpenH = oh;
             du.Occupied = occ;
             du.OccupiedH = occh;
-            du.RecordedDate = DateTime.Now;
+            du.RecordedDate = DateTime.Now.AddHours(-5);
 
             dr.Update(du);
 
